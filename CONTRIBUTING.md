@@ -1,5 +1,5 @@
 # Conributing: This file describes how people can contribute to the repository.
-This repo contains code to more efficiently compile and summarize climate data for Northeast Temperate Network parks. 
+This repo contains code to more efficiently compile and visualize climate data in Northeast Temperate Network parks.
 Changes that improve the utility of this repository are encouraged.
 
 ## Contributing Requirements: 
