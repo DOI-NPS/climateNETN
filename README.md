@@ -47,4 +47,3 @@ for the drought data.</li>
 <li>Knit the index.Rmd, and check that the latest month was included.</li>
 <li>Push the latest index.html, index.Rmd, and updated data files to github. A few minutes later the summary report should be updated.</li>
 </ol>
-

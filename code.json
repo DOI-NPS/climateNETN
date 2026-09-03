@@ -3,7 +3,7 @@
     "name": "climateNETN",
     "organization": "NATIONAL PARK SERVICE",
     "description": "a repository for climateNETN R package",
-    "version": "0.0.1",
+    "version": "1.03",
     "status": "ongoing development",
     "permissions": {
       "usageType": "openSource",
