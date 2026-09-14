@@ -2,9 +2,9 @@
 This package stores, compiles, summarizes and visualizes climate data for NETN park centroids. 
 Package primarily relies on NOAA gridded climate data (see www.ncei.noaa.gov for more information), 
 which include monthly gridded data from 1895 through to present day and 2 sets of normals- 1901 to 2000 (20th century), 
-and 1991 to 2020 (30-year normal). Climate data are compiled for NETN park centroids. 
-See <a href="https://katemmiller.github.io/waterNETN/"> https://katemmiller.github.io/waterNETN/</a> 
-(user guide for both waterNETN and climateNETN) </a> for details on how to use the functions in this package.
+and 1991 to 2020 (30-year normal). Climate data are compiled for NETN park centroids. Each function in the 
+climateNETN package has help documentation that includes examples.
+
 
 The R package can be installed using `pak::pkg_install('doi-nps/climateNETN')`. Previous archived versions of this R package can be found at <a href="www.github.com/katemmiller/climateNETN">www.github.com/katemmiller/climateNETN</a>
 
