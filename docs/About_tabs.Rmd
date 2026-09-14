@@ -25,7 +25,7 @@ For more information, see the NETN home page: <a href="https://www.nps.gov/im/ne
 Drought conditions are derived from the U.S. Drought Monitor (<a href="https://droughtmonitor.unl.edu/">https://droughtmonitor.unl.edu/</a>), which reports proportion of counties that are in one of five drought levels every week. This summary reports drought conditions for the predominant county that each park occurs in. Note that because parks are typically much smaller than the county they occur in, reported drought conditions may not always be the most representative of conditions on the ground. 
 <br>
 <br>
-Climate data are compiled and visualized using functions in the <a href="https://github.com/KateMMiller/climateNETN/">climateNETN R package</a>. See <a href="https://katemmiller.github.io/waterNETN/">https://katemmiller.github.io/waterNETN/</a> (user guide for both waterNETN and climateNETN R packages) for details on how to use the functions in this package. Note that, among other features, you can use the 30-year normal instead of the 20th century normal as the baseline, can use scientific units (e.g., F and mm), and can change color palettes and year ranges in plots within climateNETN functions. 
+Climate data are compiled and visualized using functions in the <a href="https://github.com/doi-nps/climateNETN/">climateNETN R package</a>. Each function in the climateNETN package has help documentation with examples. Note that, among other features, you can use the 30-year normal instead of the 20th century normal as the baseline, can use scientific units (e.g., F and mm), and can change color palettes and year ranges in plots within climateNETN functions. 
 </p>
 <br>
 </details>
