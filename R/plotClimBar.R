@@ -196,7 +196,7 @@ plotClimBar <- function(park = "all",
   ylab <- if(length(parameter) > 1 &
              any(parameter %in% c("ppt", "ppt_pct")) &
              any(parameter %in% c("tmean", "tmax", "tmin"))){"Monthly Value"
-  } else if(length(parameter) > 1 & all(parameter %in% c("tmean", "tmax", "tmin"))){
+    } else if(length(parameter) > 1 & all(parameter %in% c("tmean", "tmax", "tmin"))){
     paste0("Monthly Temperature (", units_temp, ")\n")
     } else {param_labels$param_label[param_labels$param == parameter]}
 
@@ -236,17 +236,17 @@ plotClimBar <- function(park = "all",
   climbarplot <-
     ggplot(clim_dat_final, aes(x = date_chr, y = value,
                                group = if(num_parks > 1 & num_params == 1){UnitCode
-                               } else if(num_parks == 1 & num_params > 1){param_label
-                               } else if(num_parks > 1 & num_params > 1){interaction(param_label, UnitCode)
-                               } else {param_label},
+                               } else if(num_parks == 1 & num_params > 1){param
+                               } else if(num_parks > 1 & num_params > 1){interaction(ylab, UnitCode)
+                               } else {ylab},
                                color = if(num_parks > 1 & num_params == 1){UnitCode
-                               } else if(num_parks == 1 & num_params > 1){param_label
-                               } else if(num_parks > 1 & num_params > 1){interaction(param_label, UnitCode)
-                               } else {param_label},
+                               } else if(num_parks == 1 & num_params > 1){param
+                               } else if(num_parks > 1 & num_params > 1){interaction(ylab, UnitCode)
+                               } else {ylab},
                                fill = if(num_parks > 1 & num_params == 1){UnitCode
-                               } else if(num_parks == 1 & num_params > 1){param_label
-                               } else if(num_parks > 1 & num_params > 1){interaction(param_label, UnitCode)
-                               } else {param_label})) +
+                               } else if(num_parks == 1 & num_params > 1){param
+                               } else if(num_parks > 1 & num_params > 1){interaction(ylab, UnitCode)
+                               } else {ylab})) +
       # layers
       geom_bar(stat = 'identity', alpha = 0.6) +
       # themes
@@ -262,8 +262,8 @@ plotClimBar <- function(park = "all",
           panel.grid.major.x = element_line(color = 'grey'))}} +#,
       # facets
       {if(facetparam == FALSE & facetpark == TRUE){facet_wrap(~UnitName, ncol = numcol)}}+
-      {if(facetparam == TRUE & facetpark == FALSE){facet_wrap(~param_label, scales = facet_y, ncol = numcol)}}+
-      {if(facetparam == TRUE & facetpark == TRUE){facet_wrap(~UnitName + param_label, ncol = numcol)}}+
+      {if(facetparam == TRUE & facetpark == FALSE){facet_wrap(~ylab, scales = facet_y, ncol = numcol)}}+
+      {if(facetparam == TRUE & facetpark == TRUE){facet_wrap(~UnitName +ylab, ncol = numcol)}}+
       # palettes
       scale_fill_manual(values = pal) +
       scale_color_manual(values = pal) +
@@ -274,7 +274,7 @@ plotClimBar <- function(park = "all",
       scale_y_continuous(n.breaks = 8) +
       # labels/themes
       labs(x = NULL, y = ylab,
-           alt = paste0("A bar plot of monthly ", param_label, " for ", park, " covering ",
+           alt = paste0("A bar plot of monthly ", ylab, " for ", park, " covering ",
                         ifelse(length(years > 1), 
                                paste0("years: ", range(years), collapse = " through "),
                                paste0("year: ", years)))
